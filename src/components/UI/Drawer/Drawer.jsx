@@ -21,6 +21,7 @@ function AppDrawer ({open, handleDrawer}) {
         urlTypes.marvel,
         urlTypes.dc,
         urlTypes.search,
+        urlTypes.random,
     ]
 
     return (

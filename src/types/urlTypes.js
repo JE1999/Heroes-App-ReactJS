@@ -1,13 +1,13 @@
 import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 import AccessibilityIcon from '@material-ui/icons/Accessibility'; 
 import SearchIcon from '@material-ui/icons/Search';
+import CasinoIcon from '@material-ui/icons/Casino';
 
 const urlTypes = {
 
     login: {
         name: 'Login',
         url: '/login',
-        icon: null
     },
 
     marvel: {
@@ -27,12 +27,17 @@ const urlTypes = {
         url: '/search',
         icon: <SearchIcon />,
     },
+    
+    random: {
+        name: 'Random',
+        url: '/random',
+        icon: <CasinoIcon />,
+    },
 
     hero: {
         name: 'Heroe',
         url: '/hero/',
         id: ':heroId',
-        icon: null,
     },
 
 }

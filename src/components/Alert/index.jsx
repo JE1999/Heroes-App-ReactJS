@@ -3,16 +3,17 @@ import PropTypes from 'prop-types'
 
 import Alert from '@material-ui/lab/Alert';
 
-const AppAlert = ({q}) => {
+const AppAlert = ({type="error", alertInfo}) => {
     return (
-        <Alert variant="outlined" severity="warning">
-            No se encontró <b>{q}</b>
+        <Alert variant="outlined" severity={type}>
+            {alertInfo}
         </Alert>
     )
 }
 
 AppAlert.propTypes = {
-    q: PropTypes.string.isRequired
+    type: PropTypes.string,
+    alertInfo: PropTypes.string.isRequired
 }
 
 export default memo(AppAlert)

@@ -10,6 +10,7 @@ import DC from "../pages/DC";
 import Hero from "../pages/Hero";
 import Marvel from "../pages/Marvel";
 import Search from "../pages/Search";
+import Random from "../pages/Random";
 
 export default function DashboardRoutes () {
     return (
@@ -19,6 +20,7 @@ export default function DashboardRoutes () {
                 <Route exact path={urlTypes.marvel.url} component={Marvel} />
                 <Route exact path={urlTypes.dc.url} component={DC} />
                 <Route exact path={urlTypes.search.url} component={Search} />
+                <Route exact path={urlTypes.random.url} component={Random} />
                 <Route exact path={`${urlTypes.hero.url}${urlTypes.hero.id}`} component={Hero} />
 
                 <Redirect to={urlTypes.marvel.url} />

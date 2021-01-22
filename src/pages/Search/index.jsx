@@ -19,6 +19,7 @@ import AppAlert from '../../components/Alert'
 import { getHeroesByName } from '../../selectors/getHeroesByName';
 
 import urlTypes from '../../types/urlTypes';
+import messageTypes from '../../types/messageTypes';
 
 const schema = yup.object().shape({
     searchHero: yup.string().required().trim(),
@@ -76,7 +77,10 @@ export default function Search ({history}) {
 
                 {q !== '' && !heroesFiltered[0] &&
                     <GridItem md={12} lg={12}>
-                        <AppAlert q={q} />
+                        <AppAlert 
+                            type="warning"
+                            alertInfo={`${messageTypes.alertNotFound} ${q}`} 
+                        />
                     </GridItem>
                 }
 
