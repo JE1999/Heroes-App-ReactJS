@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 
 import { NavLink } from 'react-router-dom';
 
@@ -25,4 +25,4 @@ const AppListItem = ({optionsMenu}) => {
     )
 }
 
-export default memo(AppListItem)
+export default AppListItem

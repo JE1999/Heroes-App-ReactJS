@@ -8,6 +8,7 @@ export const ModeThemeContext = createContext()
 const ModeThemeProvider = ({children}) =>{
 
     const [stateModeDark, setStateModeDark] = useState('')
+    const [open, setOpen] = useState(true);
 
     useEffect(() => {
         setStateModeDark(localStorage.getItem(localStorageTypes.modeDark) || '')
@@ -17,12 +18,18 @@ const ModeThemeProvider = ({children}) =>{
         stateModeDark === '' ? localStorage.setItem(localStorageTypes.modeDark, 'true') : localStorage.setItem(localStorageTypes.modeDark, '')
         setStateModeDark(stateModeDark === '' ? 'true' : '')
     }
-    
+
+    const handleDrawer = () => {
+        setOpen(!open);
+    }
+
     return(
         <ModeThemeContext.Provider
             value={{
                 stateModeDark,
-                modeDark
+                open,
+                modeDark,
+                handleDrawer
             }}
         >
             {children}

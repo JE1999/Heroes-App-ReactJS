@@ -1,4 +1,4 @@
-import React, { memo } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import clsx from 'clsx';
 import Divider from '@material-ui/core/Divider';
@@ -62,4 +62,4 @@ AppDrawer.propTypes = {
     handleDrawer: PropTypes.func.isRequired,
 }
 
-export default memo(AppDrawer);
+export default AppDrawer;

@@ -1,4 +1,4 @@
-import React, { memo, useCallback, useState } from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -9,16 +9,13 @@ import AppDrawer from './Drawer';
 import AppContainer from '../../Container';
 
 import { miniDrawerStyles } from './Style';
+import { ModeThemeContext } from '../../../hooks/Context/ModeTheme/ModeThemeContext';
 
 const MiniDrawer = ({children}) => {
 
   const classes = miniDrawerStyles();
-  
-  const [open, setOpen] = useState(true);
 
-  const handleDrawer = useCallback(() => {
-    setOpen(!open);
-  }, [open])
+  const { open, handleDrawer } = useContext(ModeThemeContext)
 
   return (
     <div className={classes.root}>
@@ -42,4 +39,4 @@ MiniDrawer.propTypes = {
   children: PropTypes.object.isRequired,
 }
 
-export default memo(MiniDrawer);
+export default MiniDrawer;

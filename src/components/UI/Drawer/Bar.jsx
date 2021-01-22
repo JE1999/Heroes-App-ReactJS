@@ -1,4 +1,4 @@
-import React, { memo, useContext } from 'react'
+import React, { useContext } from 'react'
 import { useHistory } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
@@ -93,4 +93,4 @@ Bar.propTypes = {
     handleDrawer: PropTypes.func.isRequired,
 }
 
-export default memo(Bar)
+export default Bar;
